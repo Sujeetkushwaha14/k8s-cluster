@@ -1,0 +1,21 @@
+trigger:
+- main
+
+jobs:
+  - job: terraforminstaller
+    pool: agent pool local
+    steps:
+    - task: TerraformInstaller@1
+      inputs:
+        terraformVersion: 'latest'
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: 'infra'
+        backendServiceArm: 'sanatsp'
+        backendAzureRmStorageAccountName: 'stgbacksk123'
+        backendAzureRmContainerName: 'contnsbackends'
+        backendAzureRmKey: 'terraform.tfstate'
+    
+    
