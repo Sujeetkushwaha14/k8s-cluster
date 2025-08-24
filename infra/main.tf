@@ -6,7 +6,7 @@ module "rgmodule" {
 
 module "acrmodule" {
   source   = "../module/acr"
-  rg_name  = var.rg_name
+  rg_name  = module.rgmodule.rg_name
   location_acr = var.location_acr
   acr_name = var.acr_name
   acr_sku  = var.acr_sku
