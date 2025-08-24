@@ -18,4 +18,21 @@ jobs:
         backendAzureRmContainerName: 'contnsbackends'
         backendAzureRmKey: 'terraform.tfstate'
     
+  - job: manaul
+    pool: server
+    steps:
+    - task: ManualValidation@1
+      inputs:
+        notifyUsers: 'sujeet kushwaha'
+
+  - job: apply
+    dependsOn: manual
+    pool: agent pool local
+    steps:
     
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        workingDirectory: 'infra'
+        environmentServiceNameAzureRM: 'sanatsp'
