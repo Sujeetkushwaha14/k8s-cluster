@@ -18,7 +18,7 @@ jobs:
         backendAzureRmContainerName: 'contnsbackends'
         backendAzureRmKey: 'terraform.tfstate'
     
-  - job: manaul
+  - job: ManualValidation
     pool: server
     steps:
     - task: ManualValidation@1
@@ -26,7 +26,7 @@ jobs:
         notifyUsers: 'sujeet kushwaha'
 
   - job: apply
-    dependsOn: manual
+    dependsOn: ManualValidation
     pool: agent pool local
     steps:
     
