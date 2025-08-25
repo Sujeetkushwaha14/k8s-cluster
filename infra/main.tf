@@ -23,3 +23,4 @@ module "aksmodule" {
   identity_type = var.identity_type
 
 }
+
