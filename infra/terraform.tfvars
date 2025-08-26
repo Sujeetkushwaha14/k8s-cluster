@@ -9,3 +9,6 @@ aks_name      = "aksujeet"
 dns_prefix    = "autodeploy"
 node_name     = "nodepoolname"
 location_acr = "centralindia"
+
+
+
