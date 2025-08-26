@@ -1,7 +1,5 @@
 subscription_id = "f0c6c28a-7429-42b3-aefa-63439e20a651"
-
 rg_name       = "rgsujeetdevops"
-
 location      = "westus"
 acr_name      = "acrsujeetq"
 acr_sku       = "Basic"
@@ -11,3 +9,6 @@ aks_name      = "aksujeet"
 dns_prefix    = "autodeploy"
 node_name     = "nodepoolname"
 location_acr = "centralindia"
+
+
+

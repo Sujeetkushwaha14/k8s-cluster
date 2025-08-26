@@ -13,13 +13,16 @@ terraform {
     key                  = "terraform.tfstate"
     subscription_id      = "f0c6c28a-7429-42b3-aefa-63439e20a651"
   }
-
 }
-
+ 
 provider "azurerm" {
   subscription_id = var.subscription_id
   features {}
 }
+
+
+
+
 
 
 
