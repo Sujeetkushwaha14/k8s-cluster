@@ -3,7 +3,7 @@ module "rgmodule" {
   rg_name  = var.rg_name
   location = var.location
 }
-
+ 
 
 module "acrmodule" {
   source   = "../module/acr"
@@ -24,5 +24,6 @@ module "aksmodule" {
   identity_type = var.identity_type
 
 }
+
 
 
