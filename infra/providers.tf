@@ -23,9 +23,3 @@ provider "azurerm" {
 
 
 
-
-
-
-
-
-
