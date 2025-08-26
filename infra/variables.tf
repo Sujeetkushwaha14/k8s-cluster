@@ -1,7 +1,6 @@
 variable "subscription_id" {
   type      = string
   sensitive = true
-
 }
 
 variable "rg_name" {
@@ -37,4 +36,5 @@ variable "node_name" {
 }
 variable "location_acr" {
  type =  string
+
 }
